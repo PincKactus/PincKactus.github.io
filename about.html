@@ -17,25 +17,48 @@
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
+
+        <!-- Home -->
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
         </li>
+
+        <!-- About Me -->
         <li class="nav-item">
           <a class="nav-link" href="about.html">About Me</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="kactus-force.html">Kactus Force</a>
+
+        <!-- Kactus Force dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="kactusDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Kactus Force
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="kactusDropdown">
+            <li><a class="dropdown-item" href="kactus-force.html">Overview</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="bot/index.html">Bot Documentation Home</a></li>
+            <li><a class="dropdown-item" href="bot/currency.html">Currency System</a></li>
+            <!-- add more sub-pages here -->
+          </ul>
         </li>
+
+        <!-- Contact last -->
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bot/index.html">Bot Docs</a>
-        </li>
+
       </ul>
     </div>
   </div>
 </nav>
+
 
   <section class="container py-5">
     <h2>About Pinc Kactus</h2>
