@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency System – Bot Docs</title>
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Pinc Kactus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="../kactus-force.html">Kactus Force</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Bot Docs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <h2>Currency System</h2>
+    <p>The bot supports five currencies you can earn, convert, give, and spend in its shop:</p>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Name</th>
+          <th>Emoji</th>
+          <th>Rate to Celestine</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>celestine</td>
+          <td>Celestine</td>
+          <td>🔆</td>
+          <td>1.0</td>
+        </tr>
+        <tr>
+          <td>lumina</td>
+          <td>Lumina</td>
+          <td>✨</td>
+          <td>π</td>
+        </tr>
+        <tr>
+          <td>chronostone</td>
+          <td>Chronostone</td>
+          <td>⏳</td>
+          <td>π × √2</td>
+        </tr>
+        <tr>
+          <td>obsidian</td>
+          <td>Obsidian</td>
+          <td>🜨</td>
+          <td>π × √2 × e</td>
+        </tr>
+        <tr>
+          <td>abyssal</td>
+          <td>Abyssal</td>
+          <td>🌌</td>
+          <td>π × √2 × e × φ</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>How Conversion Works</h3>
+    <p>
+      Internally, any amount is first converted into its “Celestine equivalent” via the rates above, then divided by the target currency’s rate.  
+      The command <code>λconvert &lt;amt&gt; &lt;from&gt; &lt;to&gt;</code> will prompt you to confirm before adjusting your balances.
+    </p>
+
+    <h3>Commands</h3>
+    <ul>
+      <li><code>λbalance</code> – View your current wallet across all currencies.</li>
+      <li><code>λconvert &lt;amt&gt; &lt;from&gt; &lt;to&gt;</code> – Convert between currencies.</li>
+      <li><code>λgive @user &lt;amt&gt; &lt;currency&gt;</code> – Gift currency to someone else.</li>
+      <li><code>λmanifest &lt;user&gt; &lt;amt&gt; &lt;currency&gt;</code> – (Admin) Add currency to a user.</li>
+      <li><code>λbanish &lt;user&gt; &lt;amt&gt; &lt;currency&gt;</code> – (Admin) Remove currency from a user.</li>
+    </ul>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <small>&copy; 2025 Pinc Kactus</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
