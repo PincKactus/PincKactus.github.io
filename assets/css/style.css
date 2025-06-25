@@ -79,13 +79,13 @@ h2::after, h3::after {
   background: var(--accent);
 }
 
-/* Lists (only in main content) */
-main ul li {
+/* Lists */
+ul li {
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
 }
-main ul li::before {
+ul li::before {
   content: '•';
   color: var(--accent);
   position: absolute;
