@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio – Pinc Kactus</title>
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">Pinc Kactus</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/portfolio.html">Portfolio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="kactusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kactus Force</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="kactusDropdown">
+              <li><a class="dropdown-item" href="/kactus-force.html">Overview</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/bot/index.html">Instruction Manuals</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <h2 class="mb-4">Portfolio</h2>
+
+    <!-- Kactus Art -->
+    <section class="mb-5">
+      <h3>Kactus Art</h3>
+      <div class="row g-3">
+        <!-- Add your art images in assets/img/kactus-art/ and update filenames -->
+        <figure class="col-6 col-md-3">
+          <img src="/assets/img/kactus-art/art1.jpg" class="img-fluid rounded" alt="Kactus Art 1">
+        </figure>
+        <figure class="col-6 col-md-3">
+          <img src="/assets/img/kactus-art/art2.jpg" class="img-fluid rounded" alt="Kactus Art 2">
+        </figure>
+        <figure class="col-6 col-md-3">
+          <img src="/assets/img/kactus-art/art3.jpg" class="img-fluid rounded" alt="Kactus Art 3">
+        </figure>
+        <figure class="col-6 col-md-3">
+          <img src="/assets/img/kactus-art/art4.jpg" class="img-fluid rounded" alt="Kactus Art 4">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Open Source Projects -->
+    <section class="mb-5">
+      <h3>Open Source Projects</h3>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Kactus Force Bot</h5>
+              <p class="card-text">Discord bot for achievements, currency, and utilities.</p>
+              <a href="https://github.com/your-username/KactusForceBot" target="_blank" class="mt-auto btn btn-primary">View Repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Personal Website</h5>
+              <p class="card-text">This very site: static on GitHub Pages, built with Bootstrap.</p>
+              <a href="https://your-username.github.io" target="_blank" class="mt-auto btn btn-primary">Visit Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools & Utilities -->
+    <section class="mb-5">
+      <h3>Tools &amp; Utilities</h3>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Random Quote Generator</h5>
+              <p class="card-text">A simple JS integration fetching jokes dynamically for the hero section.</p>
+              <a href="/index.html" class="mt-auto btn btn-secondary">See It in Action</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more cards here -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <small>&copy; 2025 Pinc Kactus</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
