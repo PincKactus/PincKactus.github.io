@@ -1,13 +1,89 @@
 /* style.css */
+
+:root {
+  /* Custom color palette */
+  --bs-primary: #2c786c;
+  --bs-success: #2c786c;
+  --bs-dark: #1b1b1b;
+  --accent: #f0a500;
+  --transition-speed: 0.3s;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+  transition: background var(--transition-speed);
 }
+
+/* Navbar Enhancements */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-link {
+  transition: color var(--transition-speed);
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent) !important;
+}
+
+/* Hero Header */
 header {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: url('https://source.unsplash.com/featured/?cactus') no-repeat center/cover;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  overflow: hidden;
 }
-blockquote {
-  max-width: 600px;
-  margin: 0 auto;
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(44,120,108,0.6);
+}
+header .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Buttons */
+.btn-success {
+  background-color: var(--bs-primary);
+  border: none;
+  transition: background var(--transition-speed), transform var(--transition-speed);
+}
+.btn-success:hover {
+  background-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Cards Hover Effect */
+.card {
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Image Gallery */
+figure img {
+  transition: transform var(--transition-speed);
+}
+figure img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: var(--bs-dark) !important;
+  color: #fff;
 }
