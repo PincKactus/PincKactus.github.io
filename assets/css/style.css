@@ -1,4 +1,5 @@
 /* style.css */
+<<<<<<< HEAD
 
 :root {
   --bs-primary: #2c786c;
@@ -77,13 +78,13 @@ h2::after, h3::after {
   background: var(--accent);
 }
 
-/* Lists */
-ul li {
+/* Lists (only in main content) */
+main ul li {
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
 }
-ul li::before {
+main ul li::before {
   content: '•';
   color: var(--accent);
   position: absolute;
@@ -169,4 +170,17 @@ footer {
 }
 #scrollTopBtn:hover {
   background: var(--accent);
+=======
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+header {
+  background: url('https://source.unsplash.com/featured/?cactus') no-repeat center/cover;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+blockquote {
+  max-width: 600px;
+  margin: 0 auto;
+>>>>>>> parent of d4e73b3 (Update style.css)
 }
