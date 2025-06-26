@@ -3,107 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Pinc Kactus Museum</title>
-  <link href="/assets/css/style.css" rel="stylesheet">
+  <title>Pinc Kactus</title>
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Hero Styles */
-    #hero {
-      position: relative;
-      height: 80vh;
-      background: url('https://source.unsplash.com/featured/?cactus,museum') no-repeat center/cover;
-      background-size: cover;
-      overflow: hidden;
-    }
-    #hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-    .neon-text {
-      font-size: 4rem;
-      text-shadow: 
-        0 0 5px #f0a500,
-        0 0 10px #f0a500,
-        0 0 20px #f0a500;
-      animation: glow 1.5s ease-in-out infinite alternate;
-    }
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #f0a500, 0 0 10px #f0a500;
-      }
-      to {
-        text-shadow: 0 0 20px #f0a500, 0 0 30px #f0a500;
-      }
-    }
-    #visit-now {
-      margin-top: 1.5rem;
-      border: 2px solid #f0a500;
-      color: #f0a500;
-      transition: background 0.3s, color 0.3s;
-    }
-    #visit-now:hover {
-      background: #f0a500;
-      color: #1b1b1b;
-    }
-  </style>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- Navbar (same as existing) -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
     <div class="container">
-      <a class="navbar-brand" href="/index.html">Pinc Kactus Museum</a>
+      <a class="navbar-brand" href="/index.html">Pinc Kactus</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="/portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/portfolio.html">Portfolio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="kactusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kactus Force</a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="kactusDropdown">
+              <li><a class="dropdown-item" href="/kactus-force.html">Overview</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/bot/index.html">Instruction Manuals</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header id="hero">
-    <div class="hero-content">
-      <h1 class="neon-text">The Pinc Kactus Museum</h1>
-      <p class="lead">Explore the art, humor, and curiosities of the digital desert.</p>
-      <button id="visit-now" class="btn btn-outline-light btn-lg">Visit Now</button>
+  <!-- Hero -->
+  <header class="bg-light text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Welcome to Pinc Kactus’s World</h1>
+      <p class="lead">A little corner of the internet about me, with some fun extras.</p>
+      <button id="new-quote" class="btn btn-success">Surprise Me!</button>
     </div>
   </header>
 
-  <!-- Main Content (exhibits) -->
-  <main>
-    <!-- Subsequent sections go here -->
-  </main>
+  <!-- Random Quote Section -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <blockquote id="quote" class="fs-5 fst-italic">Click “Surprise Me!” to get a random quote.</blockquote>
+    </div>
+  </section>
 
-  <!-- Footer (same as existing) -->
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
-    <small>&copy; 2025 The Pinc Kactus Museum</small>
+    <small>&copy; 2025 Pinc Kactus</small>
   </footer>
 
+  <!-- Bootstrap & Custom JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('visit-now').addEventListener('click', () => {
-      document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
+<button id="scrollTopBtn" title="Top">↑</button>
+<script>
+  const btn = document.getElementById('scrollTopBtn');
+  window.onscroll = () => window.scrollY > 300 ? btn.style.display = 'block' : btn.style.display = 'none';
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
 </body>
 </html>
