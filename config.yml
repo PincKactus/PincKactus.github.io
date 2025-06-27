@@ -1,0 +1,14 @@
+title: "The Pinc Kactus Museum"
+baseurl: ""       # leave empty for root
+url: "https://<your-username>.github.io"
+markdown: kramdown
+theme: minima      # you can override or remove
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections (optional)
+collections:
+  bot_docs:
+    output: true
+    permalink: /bot/:path/

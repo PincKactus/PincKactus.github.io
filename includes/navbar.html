@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container">
+    <a class="navbar-brand" href="{{ '/' | relative_url}}">Pinc Kactus Museum</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        {% assign p = page.url %}
+        <li class="nav-item">
+          <a class="nav-link {% if p == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if p == '/about/' %}active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if p == '/portfolio/' %}active{% endif %}" href="{{ '/portfolio/' | relative_url }}">Kactus Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if p == '/contact/' %}active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {% if p contains '/bot/' %}active{% endif %}" href="#" id="kactusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Kactus Force
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="kactusDropdown">
+            <li><a class="dropdown-item" href="{{ '/kactus-force.html' | relative_url }}">Overview</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{ '/bot/' | relative_url }}">Instruction Manuals</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
