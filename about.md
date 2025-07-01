@@ -1,7 +1,9 @@
----
+--- 
 layout: default
 title: About Me
+permalink: /about/
 ---
+<!-- your about content -->
 
 <section class="container py-5">
   <h2>About Pinc Kactus</h2>
