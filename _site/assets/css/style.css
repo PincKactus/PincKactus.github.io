@@ -1,0 +1,43 @@
+/* style.css */
+
+/* Typography */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Hero Header */
+header {
+  background: url('https://source.unsplash.com/featured/?cactus') no-repeat center/cover;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Blockquote */
+blockquote {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Theme Color Overrides */
+.bg-success {
+  background-color: #FF1493 !important; /* Deep Pink */
+}
+.btn-success {
+  background-color: #FF1493; /* Deep Pink */
+  border-color: #FF1493;
+}
+.btn-success:hover {
+  background-color: #FF69B4; /* Hot Pink */
+  border-color: #FF69B4;
+}
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #FF69B4 !important;
+}
+.btn-outline-light {
+  border-color: #FF1493;
+  color: #FF1493;
+}
+.btn-outline-light:hover {
+  background-color: #FF1493;
+  color: #fff;
+}
