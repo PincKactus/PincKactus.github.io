@@ -1,6 +1,24 @@
 {
   "name": "pinc-kactus-shop",
   "dependencies": {
+    "airtable": "^0.12.2",
     "faunadb": "^4.0.0"
-  }
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PincKactus/PincKactus.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PincKactus/PincKactus.github.io/issues"
+  },
+  "homepage": "https://github.com/PincKactus/PincKactus.github.io#readme"
 }

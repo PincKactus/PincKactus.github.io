@@ -1,37 +1,80 @@
-<<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container">
-    <a class="navbar-brand" href="{{ '/' | relative_url }}">Pinc Kactus Museum</a>
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">Pinc Kactus</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
-        {% assign p = page.url %}
+
+        <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link {% if p == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+          <a class="nav-link {% if page.url == '/' %}active{% endif %}"
+             href="{{ '/' | relative_url }}">Home</a>
         </li>
+
+        <!-- About Me -->
         <li class="nav-item">
-          <a class="nav-link {% if p == '/about/' %}active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
+          <a class="nav-link {% if page.url contains '/about/' %}active{% endif %}"
+             href="{{ '/about/' | relative_url }}">About Me</a>
         </li>
+
+        <!-- Kactus Gallery -->
         <li class="nav-item">
-          <a class="nav-link {% if p == '/portfolio/' %}active{% endif %}" href="{{ '/portfolio/' | relative_url }}">Kactus Gallery</a>
+          <a class="nav-link {% if page.url contains '/portfolio/' %}active{% endif %}"
+             href="{{ '/portfolio/' | relative_url }}">Kactus Gallery</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {% if p == '/contact/' %}active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
-        </li>
+
+        <!-- Kactus Force dropdown -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {% if p contains '/bot/' or p contains '/kactus-force/' %}active{% endif %}" href="#" id="kactusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle
+                    {% if page.url contains '/kactus-force/' 
+                          or page.url contains '/bot/' 
+                          or page.url contains '/shop/' %}
+                      active
+                    {% endif %}"
+             href="#"
+             id="kactusDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
             Kactus Force
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="kactusDropdown">
-            <li><a class="dropdown-item" href="{{ '/kactus-force/' | relative_url }}">Overview</a></li>
+            <li>
+              <a class="dropdown-item"
+                 href="{{ '/kactus-force/' | relative_url }}">
+                Overview
+              </a>
+            </li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{{ '/bot/' | relative_url }}">Instruction Manuals</a></li>
+            <li>
+              <a class="dropdown-item"
+                 href="{{ '/bot/' | relative_url }}">
+                Instruction Manuals
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                 href="{{ '/shop/' | relative_url }}">
+                Shop
+              </a>
+            </li>
           </ul>
         </li>
+
+        <!-- Blog -->
         <li class="nav-item">
-          <a class="nav-link {% if p contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a class="nav-link {% if page.url contains '/blog/' %}active{% endif %}"
+             href="{{ '/blog/' | relative_url }}">Blog</a>
         </li>
+
+        <!-- Contact -->
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/contact/' %}active{% endif %}"
+             href="{{ '/contact/' | relative_url }}">Contact</a>
+        </li>
+
       </ul>
     </div>
   </div>
