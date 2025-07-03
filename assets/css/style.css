@@ -1,43 +1,57 @@
 /* style.css */
 
-/* Typography */
+/* Base typography */
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #333;
 }
 
-/* Hero Header */
-header {
-  background: url('https://source.unsplash.com/featured/?cactus') no-repeat center/cover;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+/* Navbar: pink background with high-contrast white text */
+.navbar {
+  background-color: #FF1493 !important;
+}
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+  color: #fff !important;
+  transition: color 0.3s;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+  color: #000 !important;
+}
+
+/* Hero section (bootstrap bg-light) text contrast */
+header.bg-light {
+  background-color: #f8f9fa;
+}
+header.bg-light h1,
+header.bg-light p {
+  color: #222 !important;
+  text-shadow: none;
+}
+
+/* Surprise Me button styling */
+.btn-success {
+  background-color: #FF1493;
+  border-color: #FF1493;
+}
+.btn-success:hover {
+  background-color: #FF69B4;
+  border-color: #FF69B4;
 }
 
 /* Blockquote */
 blockquote {
+  font-style: italic;
+  border-left: 4px solid #FF1493;
+  padding-left: 1rem;
+  color: #555;
+  margin: 2rem auto;
   max-width: 600px;
-  margin: 0 auto;
 }
 
-/* Theme Color Overrides */
-.bg-success {
-  background-color: #FF1493 !important; /* Deep Pink */
-}
-.btn-success {
-  background-color: #FF1493; /* Deep Pink */
-  border-color: #FF1493;
-}
-.btn-success:hover {
-  background-color: #FF69B4; /* Hot Pink */
-  border-color: #FF69B4;
-}
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #FF69B4 !important;
-}
-.btn-outline-light {
-  border-color: #FF1493;
-  color: #FF1493;
-}
-.btn-outline-light:hover {
-  background-color: #FF1493;
+/* Footer background + text */
+footer {
+  background: #1b1b1b !important;
   color: #fff;
 }

@@ -1,0 +1,6 @@
+{
+  "name": "pinc-kactus-shop",
+  "dependencies": {
+    "faunadb": "^4.0.0"
+  }
+}
