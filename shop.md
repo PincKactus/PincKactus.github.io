@@ -35,7 +35,7 @@ permalink: /shop/
               <h5 class="card-title">${item.name}</h5>
               <p class="card-text">${item.desc}</p>
               <button class="btn btn-primary mt-auto" onclick="buy('${item.key}')">
-                Buy for ${item.price}${item.currency}
+                Buy for ${item.price} ${item.currency}
               </button>
             </div>
           </div>
