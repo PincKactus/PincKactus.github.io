@@ -18,9 +18,13 @@ exports.handler = async (event) => {
     const currency = itemRec.get('Currency');
 
     // 2) Fetch balance
-    const [ balRec ] = await base('Balances')
-      .select({ filterByFormula: `AND({User}='${user}',{Currency}='${currency}')` })
-      .all();
+    // ↑ correct (upper-case “Currency”)
+  const [ balRec ] = await base('Balances')
+  .select({
+    filterByFormula: `AND({User}='${user}',{Currency}='${currency}')`
+  })
+  .all();
+
 
     if (!balRec || balRec.get('Amount') < price) {
       return { statusCode: 200, body: JSON.stringify({ success: false, error: 'Insufficient funds' }) };
