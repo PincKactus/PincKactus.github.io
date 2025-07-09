@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Kactus Gallery
-permalink: /kactus-gallery/
+permalink: /portfolio/
 ---
 
 <section class="container py-5">
