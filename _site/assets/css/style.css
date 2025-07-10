@@ -55,3 +55,36 @@ footer {
   background: #1b1b1b !important;
   color: #fff;
 }
+
+
+/* --------------------------------------------------------
+   Dark-mode theme variables
+   -------------------------------------------------------- */
+:root {
+  --bg-color:   #ffffff;
+  --text-color: #212529;
+  --card-bg:    #ffffff;
+  --card-text:  #212529;
+  --nav-bg:     #198754; /* Bootstrap “success” green */
+}
+
+.dark-mode {
+  --bg-color:   #121212;
+  --text-color: #e0e0e0;
+  --card-bg:    #1e1e1e;
+  --card-text:  #e0e0e0;
+  --nav-bg:     #343a40; /* dark navbar */
+}
+
+/* apply the vars site-wide */
+body {
+  background-color: var(--bg-color);
+  color:            var(--text-color);
+}
+.card {
+  background-color: var(--card-bg);
+  color:            var(--card-text);
+}
+.navbar {
+  background-color: var(--nav-bg) !important;
+}
