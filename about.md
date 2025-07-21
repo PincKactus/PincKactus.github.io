@@ -5,13 +5,13 @@ permalink: /about/
 ---
 
 <!-- Hero -->
-<section class="bg-light text-center text-dark py-5" style="background: url('https://source.unsplash.com/1600x400/?cactus,desert') center/cover no-repeat;">
-  <div class="overlay" style="background: rgba(0,0,0,0.4); position: absolute; top:0; left:0; right:0; bottom:0;"></div>
-  <div class="position-relative" style="z-index:1;">
+<section class="py-5">
+  <div class="container">
+    <h1>About Me</h1>
     <h1 class="display-4 text-white">Hi, I’m Pinc Kactus</h1>
     <p class="lead text-white-50">Gamer • Coder • Cactus Enthusiast • Discord Dev</p>
-  </div>
 </section>
+
 
 <!-- Bio + Photo -->
 <section class="container py-5">

@@ -9,3 +9,8 @@
   port      = 8888
   # Functions get served under /.netlify/functions/*
   functions = "netlify/functions"
+
+# netlify.toml
+[[headers]]
+  for = "/secret/*"
+  basicAuth = "curator:${SECRET_PASSWORD}"
