@@ -1,6 +1,11 @@
+# netlify.toml
+[[headers]]
+  for = "/secret"
+  basicAuth = "curator:MyTestPass!"
+
 [[headers]]
   for = "/secret/*"
-  basicAuth = "curator:${SECRET_PASSWORD}"
+  basicAuth = "curator:MyTestPass!"
 
 
 # netlify.toml
