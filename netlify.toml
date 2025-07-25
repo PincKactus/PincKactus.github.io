@@ -1,20 +1,16 @@
 # netlify.toml
-
 [build]
-  # Explicit Jekyll build step and publish folder
   command = "bundle exec jekyll build"
   publish = "_site"
 
-# lock down everything under /secret (including /secret/index.html)
+# protect everything under /secret/ with Basic Auth
 [[headers]]
   for = "/secret/*"
   [headers.values]
-    # allow either admin:superSecret123 or curator:MyTestPass!
     Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
 
 [dev]
-  # Override the Jekyll serve port so it doesn’t collide on Windows
+  # for local `netlify dev` so it doesn’t collide on Windows:
   command   = "bundle exec jekyll serve --livereload --port 4001"
   port      = 8888
-  # Functions get served under /.netlify/functions/*
   functions = "netlify/functions"
