@@ -1,25 +1,16 @@
+# netlify.toml
+
 [build]
-  # If you’re using Jekyll, Netlify will run this by default.
-  # But it’s good to be explicit so Netlify still applies headers to the _site folder.
-  command   = "bundle exec jekyll build"
-  publish   = "_site"
+  # Explicit Jekyll build step and publish folder
+  command = "bundle exec jekyll build"
+  publish = "_site"
 
 # lock down everything under /secret (including /secret/index.html)
 [[headers]]
   for = "/secret/*"
   [headers.values]
-    Basic-Auth = "admin:superSecret123"
-
-[[headers]]
-  for = "/secret/*"
-  basicAuth = "curator:MyTestPass!"
-
-
-# netlify.toml
-[build]
-  command   = "bundle exec jekyll build"
-  publish   = "_site"
-
+    # allow either admin:superSecret123 or curator:MyTestPass!
+    Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
 
 [dev]
   # Override the Jekyll serve port so it doesn’t collide on Windows
@@ -27,4 +18,3 @@
   port      = 8888
   # Functions get served under /.netlify/functions/*
   functions = "netlify/functions"
-
