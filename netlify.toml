@@ -1,7 +1,14 @@
-# netlify.toml
+[build]
+  # If you’re using Jekyll, Netlify will run this by default.
+  # But it’s good to be explicit so Netlify still applies headers to the _site folder.
+  command   = "bundle exec jekyll build"
+  publish   = "_site"
+
+# lock down everything under /secret (including /secret/index.html)
 [[headers]]
-  for = "/secret"
-  basicAuth = "curator:MyTestPass!"
+  for = "/secret/*"
+  [headers.values]
+    Basic-Auth = "admin:superSecret123"
 
 [[headers]]
   for = "/secret/*"
