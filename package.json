@@ -1,14 +1,20 @@
 {
   "name": "pinc-kactus-shop",
-  "dependencies": {
-    "airtable": "^0.12.2",
-    "faunadb": "^4.0.0"
-  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:jekyll": "bundle exec jekyll build",
+    "encrypt:secret": "staticrypt _site/secret/index.html _site/secret/index.html -p superSecret123",
+    "build": "npm run build:jekyll && npm run encrypt:secret",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "airtable": "^0.12.2",
+    "faunadb": "^4.0.0"
+  },
+  "devDependencies": {
+    "staticrypt": "^3.5.4"
   },
   "repository": {
     "type": "git",
@@ -20,8 +26,5 @@
   "bugs": {
     "url": "https://github.com/PincKactus/PincKactus.github.io/issues"
   },
-  "homepage": "https://github.com/PincKactus/PincKactus.github.io#readme",
-  "devDependencies": {
-    "staticrypt": "^3.5.4"
-  }
+  "homepage": "https://github.com/PincKactus/PincKactus.github.io#readme"
 }

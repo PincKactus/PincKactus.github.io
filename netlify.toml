@@ -1,21 +1,11 @@
 # netlify.toml
+
 [build]
-  command = "bundle exec jekyll build"
+  command = "npm run build"
   publish = "_site"
 
-# protect the “bare” /secret
-[[headers]]
-  for = "/secret"
-  [headers.values]
-    Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
-
-# protect everything underneath /secret/
-[[headers]]
-  for = "/secret/*"
-  [headers.values]
-    Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
-
 [dev]
-  command   = "bundle exec jekyll serve --livereload --port 4001"
+  # first build (including encryption), then serve for local testing
+  command   = "npm run build && bundle exec jekyll serve --livereload --port 4001"
   port      = 8888
   functions = "netlify/functions"
