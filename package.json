@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/PincKactus/PincKactus.github.io/issues"
   },
-  "homepage": "https://github.com/PincKactus/PincKactus.github.io#readme"
+  "homepage": "https://github.com/PincKactus/PincKactus.github.io#readme",
+  "devDependencies": {
+    "staticrypt": "^3.5.4"
+  }
 }
