@@ -3,14 +3,19 @@
   command = "bundle exec jekyll build"
   publish = "_site"
 
-# protect everything under /secret/ with Basic Auth
+# protect the “bare” /secret
+[[headers]]
+  for = "/secret"
+  [headers.values]
+    Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
+
+# protect everything underneath /secret/
 [[headers]]
   for = "/secret/*"
   [headers.values]
     Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
 
 [dev]
-  # for local `netlify dev` so it doesn’t collide on Windows:
   command   = "bundle exec jekyll serve --livereload --port 4001"
   port      = 8888
   functions = "netlify/functions"
