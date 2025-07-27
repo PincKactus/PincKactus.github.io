@@ -1,13 +1,14 @@
+# _config.yml
 title: "The Pinc Kactus Museum"
-baseurl: ""       # leave empty for root
+baseurl: ""        # root of your domain
 url: "https://pinckactus.github.io"
 markdown: kramdown
-theme: minima      # you can override or remove
+theme: minima
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# Collections (optional)
 collections:
   bot_docs:
     output: true
