@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build:jekyll": "bundle exec jekyll build",
-    "encrypt:secret": "npx staticrypt _site/secret/index.html _site/secret/index.html --no-open --password superSecret123",
-    "build": "npm run build:jekyll && npm run encrypt:secret",
+    "build": "npm run build:jekyll",
+    "build:prod": "npm run build:jekyll && npm run encrypt:secret",
     "start": "netlify dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -5,7 +5,7 @@ title: Home
 
 <header class="bg-light text-center py-5">
   <div class="container">
-    <h1 class="display-4">A Welcome to Pinc Kactus’s World</h1>
+    <h1 class="display-4">Welcome to Pinc Kactus’s World</h1>
     <p class="lead">A little corner of the internet about me, with some fun extras.</p>
     <button id="new-quote" class="btn btn-success">Surprise Me!</button>
   </div>
