@@ -1,9 +1,17 @@
-# netlify.toml
 [build]
-  command = "npm run build"
+  # for production deploy
+  command = "npm run build:prod"
   publish = "_site"
 
 [dev]
+  # local dev: build Jekyll (no encrypt), then serve
   command   = "npm run build && bundle exec jekyll serve --livereload --port 4001"
   port      = 8888
   functions = "netlify/functions"
+
+# (optional) if you still want a Netlify _header rule_ for /secret,
+# but keep in mind Staticrypt is handling the lock on the html itself.
+# [[headers]]
+#   for = "/secret/*"
+#   [headers.values]
+#     Basic-Auth = "admin:superSecret123,curator:MyTestPass!"

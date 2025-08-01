@@ -1,14 +1,12 @@
 {
   "name": "pinc-kactus-shop",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "build:jekyll": "bundle exec jekyll build",
     "encrypt:secret": "npx staticrypt _site/secret/index.html _site/secret/index.html --no-open --password superSecret123",
-    "build": "npm run build:jekyll && npm run encrypt:secret",
-    "start": "netlify dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:jekyll",
+    "build:prod": "npm run build:jekyll && npm run encrypt:secret",
+    "start": "netlify dev"
   },
   "dependencies": {
     "airtable": "^0.12.2",
@@ -16,16 +14,5 @@
   },
   "devDependencies": {
     "staticrypt": "^3.5.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PincKactus/PincKactus.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PincKactus/PincKactus.github.io/issues"
-  },
-  "homepage": "https://github.com/PincKactus/PincKactus.github.io#readme"
+  }
 }
