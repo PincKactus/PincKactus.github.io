@@ -3,24 +3,6 @@
   command = "npm run build"
   publish = "_site"
 
-# Protect exactly “/secret” (no slash)
-[[headers]]
-  for = "/secret"
-  [headers.values]
-    Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
-
-# Protect the trailing‐slash page “/secret/”
-[[headers]]
-  for = "/secret/"
-  [headers.values]
-    Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
-
-# Protect anything under “/secret/…”
-[[headers]]
-  for = "/secret/*"
-  [headers.values]
-    Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
-
 [dev]
   command   = "npm run build && bundle exec jekyll serve --livereload --port 4001"
   port      = 8888
