@@ -3,20 +3,25 @@
   command = "npm run build"
   publish = "_site"
 
-# Lock down the “bare” /secret page itself
+# Protect exactly “/secret” (no slash)
 [[headers]]
   for = "/secret"
   [headers.values]
     Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
 
-# Lock down everything beneath /secret/, e.g. /secret/foo.html
+# Protect the trailing‐slash page “/secret/”
+[[headers]]
+  for = "/secret/"
+  [headers.values]
+    Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
+
+# Protect anything under “/secret/…”
 [[headers]]
   for = "/secret/*"
   [headers.values]
     Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
 
 [dev]
-  # for local Netlify Dev; will build then spin up Jekyll
   command   = "npm run build && bundle exec jekyll serve --livereload --port 4001"
   port      = 8888
   functions = "netlify/functions"
