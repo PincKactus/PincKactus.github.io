@@ -1,18 +1,9 @@
-[[headers]]
-  for = "/secret/*"
-  basicAuth = "curator:${SECRET_PASSWORD}"
-
-
 # netlify.toml
 [build]
-  command   = "bundle exec jekyll build"
-  publish   = "_site"
-
+  command = "npm run build"
+  publish = "_site"
 
 [dev]
-  # Override the Jekyll serve port so it doesn’t collide on Windows
-  command   = "bundle exec jekyll serve --livereload --port 4001"
+  command   = "npm run build && bundle exec jekyll serve --livereload --port 4001"
   port      = 8888
-  # Functions get served under /.netlify/functions/*
   functions = "netlify/functions"
-

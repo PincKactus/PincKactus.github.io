@@ -1,14 +1,21 @@
 {
   "name": "pinc-kactus-shop",
-  "dependencies": {
-    "airtable": "^0.12.2",
-    "faunadb": "^4.0.0"
-  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:jekyll": "bundle exec jekyll build",
+    "encrypt:secret": "npx staticrypt _site/secret/index.html _site/secret/index.html --no-open --password superSecret123",
+    "build": "npm run build:jekyll && npm run encrypt:secret",
+    "start": "netlify dev",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "airtable": "^0.12.2",
+    "faunadb": "^4.0.0"
+  },
+  "devDependencies": {
+    "staticrypt": "^3.5.4"
   },
   "repository": {
     "type": "git",
