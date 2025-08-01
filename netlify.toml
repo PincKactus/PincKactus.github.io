@@ -1,11 +1,10 @@
 # netlify.toml
 
 [build]
-  # how to build your site for production
-  command = "bundle exec jekyll build"
+  command = "npm run build"
   publish = "_site"
 
-# two header rules so both /secret and /secret/anything are protected
+# password protect /secret
 [[headers]]
   for = "/secret"
   [headers.values]
@@ -15,3 +14,11 @@
   for = "/secret/*"
   [headers.values]
     Basic-Auth = "admin:superSecret123,curator:MyTestPass!"
+
+[dev]
+  # Netlify Dev will listen on 8888 and proxy to your
+  # Jekyll server on port 4001
+  port       = 8888
+  targetPort = 4001
+  command    = "bundle exec jekyll serve --livereload --port 4001"
+  functions  = "netlify/functions"
