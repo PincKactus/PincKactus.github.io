@@ -14,11 +14,11 @@ Welcome to the Giftshop—Take a souvenir on your way out!
   <li class="list-group-item">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Focus Remastered</h5>
-      <a href="{{ '/assets/downloads/FocusRemastered.zip' | relative_url }}"
+      <a href="{{ '/assets/downloads/FocusRemastered-v1.2.4.zip' | relative_url }}"
          class="btn btn-sm btn-primary">Download</a>
     </div>
     <small class="text-muted">
-      **Version:** 1.4.2 · **Size:** 15 MB · **Last updated:** 2025-07-15
+      **Version:** 1.2.4 · **Size:** 15 MB · **Last updated:** 2025-08-05
       · <a href="{{ '/releases/' | relative_url }}">View Changelog</a>
     </small>
     <p class="mt-2 mb-0">
