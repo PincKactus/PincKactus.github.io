@@ -62,7 +62,7 @@ permalink: /about/
   <div class="mb-3">
     <label>🌵 Cactus Care</label>
     <div class="progress">
-      <div class="progress-bar bg-danger" role="progressbar" style="width: 60%">60%</div>
+      <div class="progress-bar bg-danger" role="progressbar" style="width: 100%">100%</div>
     </div>
   </div>
 </section>
@@ -82,6 +82,12 @@ permalink: /about/
     </li>
     <li class="mb-4">
       <strong>2025:</strong> Migrated to Jekyll + Netlify functions / Airtable back-end.
+    </li>
+      <li class="mb-4">
+      <strong>2025:</strong> Opened Gift Shop.
+    </li>
+      <li class="mb-4">
+      <strong>2025:</strong> Placed "Focus Remastered" in Gift Shop.
     </li>
   </ul>
 </section>

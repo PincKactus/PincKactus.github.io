@@ -13,10 +13,10 @@ Track every release, big or small, right here.
   - Added “Absolute Lock” mode: disables keyboard & mouse for a timer.  
   - Improved stealth start-up banner.  
 
-- **[v1.4.1]({{ '/assets/downloads/FocusRemastered-v1.2.4.zip' | relative_url }})** (2025-08-05)  
+- **[v1.2.4]({{ '/assets/downloads/FocusRemastered-v1.2.4.zip' | relative_url }})** (2025-08-05)  
   - Added a configuration menu.  
 
-- **[v1.4.0]({{ '/assets/downloads/FocusRemastered-v1.0.0.zip' | relative_url }})** (2025-05-10)  
+- **[v1.0.0]({{ '/assets/downloads/FocusRemastered-v1.0.0.zip' | relative_url }})** (2025-05-10)  
   - Introduced distraction-blocking scheduler.  
 
 ---
