@@ -1,9 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container">
     <a class="navbar-brand" href="{{ '/' | relative_url }}">Pinc Kactus</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
 
@@ -24,28 +27,14 @@
           <a class="nav-link {% if page.url contains '/portfolio/' %}active{% endif %}"
              href="{{ '/portfolio/' | relative_url }}">Kactus Gallery</a>
         </li>
-        
-   <!-- Giftshop (new!) -->
-        <li class="nav-item">
-          <a class="nav-link{% if page.url contains '/giftshop/' %} active{% endif %}"
-             href="{{ '/giftshop/' | relative_url }}">Giftshop</a>
-        </li>
-
-
-        <!-- Changelog -->
-<li class="nav-item">
-  <a class="nav-link {% if page.url contains '/releases/' %}active{% endif %}"
-     href="{{ '/releases/' | relative_url }}">
-    Changelog
-  </a>
-</li>
 
         <!-- Kactus Force dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle
-                    {% if page.url contains '/kactus-force/' 
-                          or page.url contains '/bot/' 
-                          or page.url contains '/shop/' %}active{% endif %}"
+                    {% if page.url contains '/kactus-force/'
+                          or page.url contains '/bot/'
+                          or page.url contains '/shop/'
+                          or page.url contains '/secret/' %}active{% endif %}"
              href="#"
              id="kactusDropdown"
              role="button"
@@ -55,33 +44,33 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="kactusDropdown">
             <li>
-              <a class="dropdown-item"
-                 href="{{ '/kactus-force/' | relative_url }}">
+              <a class="dropdown-item" href="{{ '/kactus-force/' | relative_url }}">
                 Overview
               </a>
             </li>
             <li><hr class="dropdown-divider"></li>
             <li>
-              <a class="dropdown-item"
-                 href="{{ '/bot/' | relative_url }}">
+              <a class="dropdown-item" href="{{ '/bot/' | relative_url }}">
                 Instruction Manuals
               </a>
             </li>
             <li>
-              <a class="dropdown-item"
-                 href="{{ '/shop/' | relative_url }}">
+              <a class="dropdown-item" href="{{ '/shop/' | relative_url }}">
                 Shop
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="{{ '/secret/' | relative_url }}">
+                Secret Exhibit 🔒
               </a>
             </li>
           </ul>
         </li>
 
-        <!-- Secret Exhibit (password-protected) -->
+        <!-- Giftshop -->
         <li class="nav-item">
-          <a class="nav-link {% if page.url contains '/secret/' %}active{% endif %}"
-             href="{{ '/secret/' | relative_url }}">
-            Secret Exhibit
-          </a>
+          <a class="nav-link {% if page.url contains '/giftshop/' %}active{% endif %}"
+             href="{{ '/giftshop/' | relative_url }}">Giftshop</a>
         </li>
 
         <!-- Blog -->
