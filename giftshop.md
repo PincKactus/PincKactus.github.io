@@ -27,21 +27,20 @@ Welcome to the Giftshop—Take a souvenir on your way out!
     </p>
   </li>
 
-  <!-- Another Tool -->
+  <!-- Prism Downloader -->
   <li class="list-group-item">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Another Tool v2.3</h5>
-      <a href="{{ '/assets/downloads/another-tool-v2.3.exe' | relative_url }}"
+      <h5 class="mb-1">Prism Downloader</h5>
+      <a href="{{ '/assets/downloads/PrismDL.zip' | relative_url }}"
          class="btn btn-sm btn-primary">Download</a>
     </div>
     <small class="text-muted">
-      **Version:** 2.3 · **Size:** 8 MB · **Last updated:** 2025-06-01
+      **Version:** 1.0.0 · **Size:** 43.8 MB · **Last updated:** 2025-09-16
       · <a href="{{ '/releases/' | relative_url }}">View Changelog</a>
     </small>
     <p class="mt-2 mb-0">
-      Your go-to utility for… well, we’re not telling. Expect unexpected perks.
+      A video downloader.
     </p>
   </li>
 
-  <!-- add more as you like -->
 </ul>
